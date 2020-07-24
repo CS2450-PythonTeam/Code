@@ -74,7 +74,13 @@ class VM:
         print(f"InstructionCounter: {self.pc}")
         print(f"OperandCode:        {self.operation}")
         print(f"Operand:            {self.operand}" )
-        #TODO print out memory array
+        print('0\t1\t2\t3\t4\t5\t6\t7\t8\t9')
+        count = 0
+        for x in range(0,9):
+            print(f"{str(x*10).zfill(2)}\t",end='')
+            for y in range(0,9):
+                print(f"{str(self.memory[x*10+y]).zfill(5)}\t",end='')
+            print()
 
     
     def read(self, addr):
